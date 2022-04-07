@@ -171,24 +171,117 @@
 
  // ----------- 11 codewars -------------- //
 
-function transform(str) {
-    const symbols = {};
-    let result = str;
+// function transform(str) {
+//     const symbols = {};
+//     let result = str;
 
-    for (let i = 0; i < str.length; i += 1) {
-        const letter = str[i];
-        symbols[letter] = symbols[letter] ? symbols[letter] + 1 : 1;
-    }     
+//     for (let i = 0; i < str.length; i += 1) {
+//         const letter = str[i];
+//         symbols[letter] = symbols[letter] ? symbols[letter] + 1 : 1;
+//     }
 
-    const symbArr = Object.entries(symbols);
+//     const symbArr = Object.entries(symbols);
 
-    symbArr.forEach(([key, value]) => {
-        const newSymbol = value === 1 ? '(' : ')';
-        result = result.replaceAll(key, newSymbol);
-    });
-    return result;
-}
+//     symbArr.forEach(([key, value]) => {
+//         const newSymbol = value === 1 ? '(' : ')';
+//         result = result.replaceAll(key, newSymbol);
+//     });
+//     return result;
+// }
  
-console.log(transform(`din`));
-console.log(transform(`recede`));
+// console.log(transform(`din`));
+// console.log(transform(`recede`));
 
+// const productName = "Droid";
+// const pricePerItem = 3500;
+
+// // Change code below this line
+// const message = `You picked ${productName}, price per item is ${pricePerItem} credits`;
+
+
+// console.log(message)
+
+// function checkStorage(available, ordered) {
+//   let message;
+//   // Change code below this line
+
+
+//    message = ordered < available ? `The order is accepted, our manager will contact you` : `The order is accepted, our manager will contact you`
+ 
+
+//   // Change code above this line
+//   return message;
+// }
+
+// console.log(checkStorage(2, 3));
+// console.log(checkStorage(4, 3));
+
+
+// function getShippingCost(country) {
+//   let message;
+  // Change code below this line
+//   switch (country) {
+//     case `China` :
+//     message = `Shipping to ${country} will cost 100 credits`;
+//     break;
+  
+//   case `Chile`:
+//     message = `Shipping to ${country} will cost 250 credits`;
+//      break;
+  
+//   case `Australia`:
+//     message = `Shipping to ${country} will cost 170 credits`;
+//      break;
+  
+//   case `Jamaica`:
+//     message = `Shipping to ${country} will cost 120 credits`;
+//      break;
+  
+//   default :
+//   message = `Sorry, there is no delivery to your country`;
+//   }
+//   // Change code above this line
+//   return message;
+// }
+
+// console.log(getShippingCost("Australia"))
+
+
+// function getSubstring(string, length) {
+//   const substring = string.slice(0,length); // Change this line
+
+//   return substring;
+//   }
+
+// console.log(getSubstring(`My Name is Leonid`, 6));
+  
+// function formatMessage(message, maxLength) {
+//   let result;
+//   // Change code below this line
+//   if (message.length <= maxLength){
+//     result = message;
+//   } else {
+//     result = message.slice(0,maxLength) + `...`;
+//   }
+//   /// Change code above this line
+//   return result;
+// }
+
+
+// console.log(formatMessage("Vestibulum facilisis purus nec", 30))
+
+
+function checkForSpam(message) {
+  let result;
+  // Change code below this line
+  const normalizedMessage = message.toLowerCase();
+  if (normalizedMessage.includes(`spam`) || normalizedMessage.includes(`sale`)){
+    result = true;
+  } else {
+    result = false
+  }
+  // Change code above this line
+  return result;
+}
+
+console.log(checkForSpam("Latest technology news"));
